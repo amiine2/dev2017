@@ -1,66 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-
-	<link href='<?php echo base_url() . "lib/bootstrap/css/bootstrap.min.css"; ?>' rel="stylesheet" type="text/css">
-    <link href='<?php echo base_url()."css/icons.css"; ?>' rel="stylesheet">
-</head>
+    <title>Aswaq.com</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='<?php echo base_url()."assets/shortcut.jpg";?>' >
+    
+    <!-- Bootstrap CSS -->
+    <link href='<?php echo base_url() . "lib/bootstrap/css/bootstrap.min.css"; ?>' rel="stylesheet" type="text/css">
+    <link href='<?php echo base_url() . "lib/font-awesome/css/font-awesome.min.css"; ?>' rel="stylesheet" type="text/css">
+    <link href='<?php echo base_url() . "css/icons.css"; ?>' rel="stylesheet">
+    <style type="text/css">
+    	nav#header{margin-bottom: 3em;}
+    </style>
+  </head>
 <body>
 
-<nav class="navbar navbar-toggleable-sm bg-dark navbar-inverse">
-	<div class="container-fluid">
-        <a class="navbar-brand" href="#"><span class="icono-market"></span>&nbsp; Aswaq</a>
+   <?php $this->load->view('landing_page_header'); ?>
+       
+        <!--  main content -->
+<div class="container" id="mainContent">
+    <?php //$this->load->view('landing_page_registration_1_2'); ?>
 
-		<button class="navbar-toggler" data-toggle="collapse" data-targer="#mainNav">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="navbar-collapseable nav-pills" id="mainNav">
-			<ul class="nav">
-			  <li class="nav-item">
-			    <a class="nav-link active" id="home" href="#">Accueil</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" id="about" href="#">A propos</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" id="contact" href="#">Contact</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" id="signin" href="#">S'enregister</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" id="login" href="#">S'identifier</a>
-			  </li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-
-<footer class="footer fixed-bottom bg-dark">
-	<div class="container">
-		<p>
-		<span class="text-muted row justify-content-center">Aswaq &copy - 2017 Coded by Friends</span>
-	</p>
 </div>
-</footer>
+
+
+	<?php $this->load->view('footer'); ?>
 <script src='<?php echo base_url() . "lib/jquery/jquery.min.js"; ?>' type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src='<?php echo base_url() . "lib/bootstrap/js/bootstrap.min.js"; ?>' type="text/javascript"></script>
-<script type="text/javascript">
-	$(function(){
-		// move focus among navigation anchor links
-		$(".nav-link").on('click', function(){
-			if(!$( this ).hasClass('active')){
-				$(".nav-link").each(function(){
-				  $( this ).removeClass('active');	
-				})
-				$( this ).addClass('active');
-			}
-		})
-	})
-</script>
+<!--<script src='<php echo base_url() . "lib/popper/popper.min.js"; ?>' type="text/javascript"></script>
+<script src='<php echo base_url() . "lib/bootstrap/js/bootstrap.min.js"; ?>' type="text/javascript"></script>-->
+<script src='<?php echo base_url() . "lib/sammy/lib/min/sammy-0.7.6.min.js"; ?>' type="text/javascript"></script>
+<script src='<?php echo base_url() . "js/h-navigation.js"; ?>' type="text/javascript"></script>
 </body>
 </html>
